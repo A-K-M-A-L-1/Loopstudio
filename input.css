@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+
+
+   #hero{
+        background-image: url('../images/desktop/image-hero.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+    @media (max-width: 576px){
+
+        #hero{
+            background-image: url('../images/mobile/image-hero.jpg');
+            background-position: center;
+          }
+    }
+
+    h5 {
+      @apply absolute px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black;
+    }
+
+   
+
+}
+
+
+
+@layer components{
+
+.btn{
+  @apply uppercase border-2 border-black bg-white shadow-md hover:bg-black hover:text-white font-alata duration-200 py-2 px-7 tracking-widest
+}
+
+.desktop-img{
+  @apply hidden md:block w-full group-hover:scale-110 duration-200
+}
+
+.desktop-gradient{
+  @apply absolute left-0 right-0 bottom-0 top-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70
+}
+
+.desktop-item{
+  @apply hidden md:block absolute bottom-7 max-w-xs text-3xl left-0  uppercase text-white font-sans
+}
+
+
+.mob-img{
+@apply md:hidden w-full group-hover:scale-110 duration-200
+
+}
+
+.mob-gradient{
+  @apply md:hidden absolute left-0 right-0 bottom-0 top-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70
+}
+
+.mob-item{
+  @apply md:hidden absolute max-w-xs text-3xl bottom-4 left-3 uppercase text-white font-sans
+}
+
+/* Hamburger */
+
+.hamburger{
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom{
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+
+      
+}
+
+
+
+
