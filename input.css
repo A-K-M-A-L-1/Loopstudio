@@ -21,7 +21,7 @@
     }
 
     h5 {
-      @apply absolute px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black;
+      @apply absolute px-6 duration-200 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black;
     }
 
    
@@ -45,7 +45,7 @@
 }
 
 .desktop-item{
-  @apply hidden md:block absolute bottom-7 max-w-xs text-3xl left-0  uppercase text-white font-sans
+  @apply hidden md:block absolute bottom-7 max-w-[200px] text-xl left-0  uppercase text-white font-sans
 }
 
 
@@ -59,7 +59,7 @@
 }
 
 .mob-item{
-  @apply md:hidden absolute max-w-xs text-3xl bottom-4 left-3 uppercase text-white font-sans
+  @apply md:hidden absolute max-w-xs text-2xl bottom-4 tracking-tight font-medium md:tracking-normal left-2 uppercase text-white font-sans
 }
 
 /* Hamburger */
